@@ -1,17 +1,9 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+const withMT = require("@material-tailwind/react/utils/withMT");
+ 
+module.exports = withMT({
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'primary': '#284B63',
-      'white': '#ffffff'
-    },
     extend: {},
   },
   plugins: [],
-}
+});
