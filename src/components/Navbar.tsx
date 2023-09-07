@@ -44,9 +44,9 @@ const profileMenuItems = [
 
 function ProfileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- 
+
   const closeMenu = () => setIsMenuOpen(false);
- 
+
   return (
     <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
       <MenuHandler>
@@ -104,7 +104,6 @@ function ProfileMenu() {
   );
 }
 
-
 export const Navbar = () => {
   const { status: isAuth, toggleStatus: setIsAuth } = useToggle();
 
@@ -136,9 +135,7 @@ export const Navbar = () => {
         </div>
       ) : (
         <div className="md:flex px-5">
-          <Button onClick={setIsAuth} >
-            Log in
-          </Button>
+          <Button onClick={setIsAuth}>Log in</Button>
           <Button className="ml-5">Register</Button>
         </div>
       )}
