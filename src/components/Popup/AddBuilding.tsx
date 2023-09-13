@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Button,
   Dialog,
@@ -7,47 +6,66 @@ import {
   DialogFooter,
   Input,
 } from "@material-tailwind/react";
-import { Icon } from "@iconify/react";
+import { PlusCircleIcon } from "@heroicons/react/24/outline";
+import { useToggle } from "../../hooks/useToggle";
 
 export default function AddBuilding() {
-  const [open, setOpen] = React.useState(false);
+  const { status: isOpen, toggleStatus: setIsOpen } = useToggle();
 
-  const handleOpen = () => setOpen(!open);
   return (
     <div>
-      <Icon icon="simple-line-icons:plus" onClick={handleOpen} />
-      <Dialog open={open} handler={handleOpen} className="p-4">
+      <PlusCircleIcon
+        width={26}
+        onClick={setIsOpen}
+        className="cursor-pointer"
+      />
+      <Dialog open={isOpen} handler={setIsOpen} className="p-4">
         <DialogHeader>Create new building</DialogHeader>
-        <DialogBody className="py-0 ">
+        <DialogBody>
           <p>You need to enter the code for create your dormitory.</p>
-          <div className="w-full my-6 flex items-center">
-            <p className="w-[250px] text-black">Building name</p>
-            <Input label="Building name" />
+          <div className="my-6 flex items-center">
+            <p className="w-[200px] text-black">Building name</p>
+            <Input
+              label="Building name"
+              containerProps={{ className: "max-w-[400px]" }}
+            />
           </div>
-          <div className="w-full my-6 flex items-center">
-            <p className="w-[250px] text-black">Storied building</p>
-            <Input label="Storied building" />
+          <div className="my-6 flex items-center">
+            <p className="w-[200px] text-black">Storied building</p>
+            <Input
+              label="Storied building"
+              containerProps={{ className: "max-w-[400px]" }}
+            />
           </div>
-          <div className="w-full my-6 flex items-center">
-            <p className="w-[250px] text-black">Number of rooms</p>
-            <Input label="Number of rooms" />
+          <div className="my-6 flex items-center">
+            <p className="w-[200px] text-black">Number of rooms</p>
+            <Input
+              label="Number of rooms"
+              containerProps={{ className: "max-w-[400px]" }}
+            />
           </div>
         </DialogBody>
         <DialogHeader>Room details</DialogHeader>
         <DialogBody className="py-0 ">
           <p>Set room default for the fist time. You can be edited later.</p>
 
-          <div className="w-full my-6 flex items-center">
+          <div className="my-6 flex items-center">
             <p className="w-[200px] text-black">Room fee</p>
-            <Input label="Room fee" />
+            <Input
+              label="Room fee"
+              containerProps={{ className: "max-w-[400px]" }}
+            />
           </div>
-          <div className="w-full my-6 flex items-center">
+          <div className="my-6 flex items-center">
             <p className="w-[200px] text-black">Furniture fee</p>
-            <Input label="Furniture fee" />
+            <Input
+              label="Furniture fee"
+              containerProps={{ className: "max-w-[400px]" }}
+            />
           </div>
         </DialogBody>
         <DialogFooter>
-          <Button variant="filled" className="bg-black" onClick={handleOpen}>
+          <Button variant="filled" className="bg-black" onClick={setIsOpen}>
             <span>Continue</span>
           </Button>
         </DialogFooter>

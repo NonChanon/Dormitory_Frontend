@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
+import { StickyNavbar } from "./components/StickyNavbar";
 import Home from "./pages/Home";
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <StickyNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

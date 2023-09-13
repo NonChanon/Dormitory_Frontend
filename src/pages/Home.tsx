@@ -1,21 +1,18 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
 import Imgslide from "../components/Imgslide";
 import AddBuilding from "../components/Popup/AddBuilding";
-import AddDorm from "../components/Popup/AddDorm";
-import { Button } from "@material-tailwind/react";
 import Building from "../components/Building";
+import { FunnelIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
-    <div className="mx-10">
+    <div className="mx-5 md:mx-10 mt-5">
       <Imgslide />
-      {/* <AddDorm /> */}
       <div className="flex my-4 items-center justify-between">
         <p>No Building</p>
         <div className="flex justify-center items-center text-xl">
           <AddBuilding />
-          <Icon className="ml-6" icon="ri:edit-line" />
-          <Icon className="ml-6" icon="lucide:filter" />
+          <PencilSquareIcon width={25} className="ml-6" />
+          <FunnelIcon width={24} className="ml-6" />
         </div>
       </div>
       <Building />
