@@ -53,7 +53,7 @@ function ProfileMenu() {
         <Button
           variant="text"
           color="blue-gray"
-          className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto"
+          className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto text-black"
         >
           <Avatar
             variant="circular"
@@ -135,7 +135,9 @@ export const Navbar = () => {
         </div>
       ) : (
         <div className="md:flex px-5">
-          <Button onClick={setIsAuth}>Log in</Button>
+          <Button onClick={setIsAuth} variant="outlined">
+            Log in
+          </Button>
           <Button className="ml-5">Register</Button>
         </div>
       )}
