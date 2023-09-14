@@ -8,7 +8,7 @@ export default function Home() {
     <div className="mx-5 md:mx-10 mt-5">
       <Imgslide />
       <div className="flex my-4 items-center justify-between">
-        <p>No Building</p>
+        <p className="font-bold">All Building</p>
         <div className="flex justify-center items-center text-xl">
           <AddBuilding />
           <PencilSquareIcon width={25} className="ml-6" />
