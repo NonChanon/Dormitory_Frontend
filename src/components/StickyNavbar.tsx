@@ -181,7 +181,7 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-5 py-2 md:px-10 md:py-[9px] ">
+    <Navbar className="sticky top-0 z-[100] h-max max-w-full rounded-none px-5 py-2 md:px-10 md:py-[9px] ">
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="flex items-center">
           <Typography

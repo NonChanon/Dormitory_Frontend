@@ -1,6 +1,7 @@
 import {
   PencilIcon,
   PencilSquareIcon,
+  PlusCircleIcon,
   TrashIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -19,6 +20,10 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 import React from "react";
+import TenantDetail from "./TenantDetail";
+import RoomDetail from "./RoomDetail";
+import Lease from "./Lease";
+import PaymentHistory from "./PaymentHistory";
 
 const tabsData = [
   {
@@ -247,11 +252,19 @@ export default function Building() {
             ))}
           </TabsHeader>
           <TabsBody>
-            {tabsData.map(({ value, desc }) => (
-              <TabPanel key={value} value={value}>
-                {desc}
-              </TabPanel>
-            ))}
+            <TabPanel key={tabsData[0].value} value={tabsData[0].value}>
+              <TenantDetail />
+            </TabPanel>
+            <TabPanel
+              key={tabsData[1].value}
+              value={tabsData[1].value}
+              className="h-[460px]"
+            >
+              <Lease />
+            </TabPanel>
+            <TabPanel key={tabsData[2].value} value={tabsData[2].value}>
+              <PaymentHistory />
+            </TabPanel>
           </TabsBody>
         </Tabs>
         {/* <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
