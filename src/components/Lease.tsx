@@ -18,7 +18,7 @@ export default function Lease() {
   return (
     <div>
       <div className="flex justify-between">
-        <Select label="Select Month" containerProps={{ className: "w-40" }}>
+        <Select label="Select Month" containerProps={{ className: "w-20" }}>
           {month.map((m) => (
             <Option>{m}</Option>
           ))}

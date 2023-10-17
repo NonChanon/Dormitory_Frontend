@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useToggle } from "../hooks/useToggle";
 import React, { useState } from "react";
 import {
@@ -23,51 +22,7 @@ import {
   PlusCircleIcon,
   BellIcon,
 } from "@heroicons/react/24/outline";
-
 import { BuildingOffice2Icon } from "@heroicons/react/24/solid";
-
-// export const Navbar = () => {
-//   const { status: isAuth, toggleStatus: setIsAuth } = useToggle();
-
-//   const Links = [
-//     { name: "Management", path: "/" },
-//     { name: "Community", path: "/community" },
-//     { name: "Turnover", path: "/turnover" },
-//   ];
-
-//   return (
-//     <div className="md:flex justify-between items-center shadow-md w-full md:h-[60px] px-10">
-//       <ul className="md:flex md:items-centers">
-//         <li className="cursor-pointer mr-5">
-//           <BuildingOffice2Icon width={30} height={30} />
-//         </li>
-//         {isAuth ? (
-//           Links.map((link) => (
-//             <li className="md:flex items-center px-5 my-5 md:my-0 font-semibold">
-//               <Link to={link.path}>{link.name}</Link>
-//             </li>
-//           ))
-//         ) : (
-//           <li className="md:flex items-center md:px-5"></li>
-//         )}
-//       </ul>
-//       {isAuth ? (
-//         <div className="md:flex">
-//           <PlusCircleIcon width={24} className="mr-5" />
-//           <BellIcon width={24} className="mr-5" />
-//           <ProfileMenu />
-//         </div>
-//       ) : (
-//         <div className="md:flex">
-//           <Button onClick={setIsAuth} variant="outlined">
-//             Log in
-//           </Button>
-//           <Button className="ml-5">Register</Button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
 
 const profileMenuItems = [
   {
@@ -107,7 +62,7 @@ function ProfileMenu() {
       <MenuHandler>
         <Button
           variant="text"
-          className="flex items-center gap-1 rounded-full py-0.5 pr-0.5 pl-0.5 lg:ml-auto bg-gray-100 text-black"
+          className="flex items-center gap-1 rounded-full py-0.5 pr-0.5 pl-0.5 lg:ml-auto bg-gray-100 text-black bg-opacity-80"
         >
           <Avatar
             variant="circular"

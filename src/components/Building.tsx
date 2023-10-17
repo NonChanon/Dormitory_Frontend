@@ -111,7 +111,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 108",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -119,7 +119,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 109",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -127,7 +127,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 110",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -135,7 +135,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 111",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -143,7 +143,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 112",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -151,7 +151,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 113",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -159,7 +159,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 114",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -167,7 +167,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 115",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
@@ -175,7 +175,7 @@ const room = [
     tenantname: "Chanon Kitbunnadaech",
   },
   {
-    roomno: "room 107",
+    roomno: "room 116",
     roomdetail: {
       roomfee: "3500",
       furniturefee: "1500",
