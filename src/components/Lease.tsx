@@ -18,11 +18,13 @@ export default function Lease() {
   return (
     <div>
       <div className="flex justify-between">
-        <Select label="Select Month" containerProps={{ className: "w-20" }}>
-          {month.map((m) => (
-            <Option>{m}</Option>
-          ))}
-        </Select>
+        <div className="w-20">
+          <Select label="Select Month">
+            {month.map((m) => (
+              <Option>{m}</Option>
+            ))}
+          </Select>
+        </div>
         <Button
           variant="gradient"
           size="sm"

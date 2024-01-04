@@ -23,22 +23,28 @@ const year = [
 
 function Icon({ id, open }: any) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="currentColor"
-      className={`${
-        id === open ? "rotate-180" : ""
-      } h-4 w-4 transition-transform`}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-      />
-    </svg>
+    <div className="flex items-center">
+      <div className="flex items-center text-green-400 mx-2">
+        Success
+        <CheckCircleIcon width={22} className="ml-2" />
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+        stroke="currentColor"
+        className={`${
+          id === open ? "rotate-180" : ""
+        } h-4 w-4 transition-transform`}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+    </div>
   );
 }
 
@@ -47,11 +53,13 @@ export default function PaymentHistory() {
   const handleOpen = (value: any) => setOpen(open === value ? 0 : value);
   return (
     <div>
-      <Select label="Select Year" containerProps={{ className: "w-40" }}>
-        {year.map((y) => (
-          <Option>{y}</Option>
-        ))}
-      </Select>
+      <div className="w-20">
+        <Select label="Select Year">
+          {year.map((y) => (
+            <Option>{y}</Option>
+          ))}
+        </Select>
+      </div>
       <Accordion
         open={open === 1}
         icon={<Icon id={1} open={open} />}
@@ -62,10 +70,6 @@ export default function PaymentHistory() {
           className="text-sm border-none"
         >
           Rental Invoice September / 2023
-          <div className="flex items-center text-green-400">
-            Success
-            <CheckCircleIcon width={22} className="ml-2" />
-          </div>
         </AccordionHeader>
         <AccordionBody className="py-0 border-t">
           <div className="border-b">

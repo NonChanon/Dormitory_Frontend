@@ -24,6 +24,7 @@ import TenantDetail from "./TenantDetail";
 import RoomDetail from "./RoomDetail";
 import Lease from "./Lease";
 import PaymentHistory from "./PaymentHistory";
+import Report from "./Report";
 
 const tabsData = [
   {
@@ -210,7 +211,7 @@ export default function Building() {
   const handleOpen = (value: any) => setOpen(open === value ? 0 : value);
   return (
     <div className="flex justify-between">
-      <div className="border-2 px-5 py-1 rounded-md w-[70%]">
+      <div className="border-2 px-5 py-1 rounded-md w-[70%] h-fit">
         <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
           <AccordionHeader
             onClick={() => handleOpen(1)}
@@ -220,9 +221,9 @@ export default function Building() {
           >
             Building A
           </AccordionHeader>
-          <AccordionBody className="flex flex-wrap border-b-[1px]">
+          <AccordionBody className="grid grid-cols-10">
             {room.map((r) => (
-              <div className="border-2 w-fit p-4 m-2 rounded-md">
+              <div className="flex border-2 m-2 h-14 rounded-md justify-center items-center">
                 <span>{r.roomno}</span>
               </div>
             ))}
@@ -252,55 +253,36 @@ export default function Building() {
             ))}
           </TabsHeader>
           <TabsBody>
-            <TabPanel key={tabsData[0].value} value={tabsData[0].value}>
+            <TabPanel
+              key={tabsData[0].value}
+              value={tabsData[0].value}
+              className="!px-0"
+            >
               <TenantDetail />
             </TabPanel>
             <TabPanel
               key={tabsData[1].value}
               value={tabsData[1].value}
-              className="h-[460px]"
+              className="!px-0"
             >
               <Lease />
             </TabPanel>
-            <TabPanel key={tabsData[2].value} value={tabsData[2].value}>
+            <TabPanel
+              key={tabsData[2].value}
+              value={tabsData[2].value}
+              className="!px-0"
+            >
               <PaymentHistory />
+            </TabPanel>
+            <TabPanel
+              key={tabsData[3].value}
+              value={tabsData[3].value}
+              className="!px-0"
+            >
+              <Report />
             </TabPanel>
           </TabsBody>
         </Tabs>
-        {/* <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-          <div className="mb-4 flex flex-col gap-6">
-            <Input size="lg" label="Name" />
-            <Input size="lg" label="Email" />
-            <Input type="password" size="lg" label="Password" />
-          </div>
-          <Checkbox
-            label={
-              <Typography
-                variant="small"
-                color="gray"
-                className="flex items-center font-normal"
-              >
-                I agree the
-                <a
-                  href="#"
-                  className="font-medium transition-colors hover:text-gray-900"
-                >
-                  &nbsp;Terms and Conditions
-                </a>
-              </Typography>
-            }
-            containerProps={{ className: "-ml-2.5" }}
-          />
-          <Button className="mt-6" fullWidth>
-            Register
-          </Button>
-          <Typography color="gray" className="mt-4 text-center font-normal">
-            Already have an account?{" "}
-            <a href="#" className="font-medium text-gray-900">
-              Sign In
-            </a>
-          </Typography>
-        </form> */}
       </Card>
     </div>
   );
