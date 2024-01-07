@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import Meter from "./pages/Meter";
+import Community from "./pages/Community";
 export default function App() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/meter" element={<Meter />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="community" element={<Community />} />
       </Routes>
     </>
   );
