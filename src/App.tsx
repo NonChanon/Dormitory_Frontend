@@ -5,6 +5,8 @@ import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import Meter from "./pages/Meter";
 import Community from "./pages/Community";
+import Invoice from "./pages/Invoice";
+import Dashboard from "./pages/Dashboard";
 export default function App() {
   return (
     <>
@@ -15,6 +17,8 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="community" element={<Community />} />
+        <Route path="/invoice" element={<Invoice />} />
+        <Route path="/invoice" element={<Dashboard />} />
       </Routes>
     </>
   );
